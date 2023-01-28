@@ -14,14 +14,13 @@ For -->
 
     BOT CVE 4 3 7 PYFLOODER
     
-# Ex command methods l4 other
+Ex command methods l4 other
 .tup_new .nds .rate_attack .roblox
 
-# ex HTTP 100k (bug) layer pyflooder
+Ex HTTP 100k (bug) layer pyflooder
 .pyflooder for custom methods http
 
-# ex command tool
-
+Ex command tool
 .help .sql_user .url_to_ip .ip_to_geo
 
 # THANKS YOU CODE NixWasHere/NixC2 #
