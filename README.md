@@ -1,4 +1,5 @@
-BOTNETC2 USE OWNER CODE HERE NixWasHere/NixC2
+# BOTNETC2 USE OWNER CODE HERE NixWasHere/NixC2
+
 if you can go to here:
 https://github.com/NixWasHere/NixC2
 
