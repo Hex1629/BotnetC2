@@ -1,3 +1,3 @@
 @echo off
-cd payload
+cd Payload
 python bot.py
