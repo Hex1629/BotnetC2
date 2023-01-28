@@ -9,9 +9,14 @@ BotnetC2 its new varints of NixC2
 
 because add sql_user | and more layer | etc
 
-# layer
-For --> BOT CVE 4 3 7 PYFLOODER
-# Ex command name
+*** layer ***
+For --> 
+```
+BOT CVE 4 3 7 PYFLOODER
+```
+
+** Ex command name **
+
 Ex command methods l4 other
 .tup_new .nds .rate_attack .roblox
 
