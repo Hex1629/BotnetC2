@@ -26,6 +26,7 @@ Ex HTTP 100k (bug) layer pyflooder
 .pyflooder for custom methods http
 
 Ex command tool
-.help .sql_user .url_to_ip .ip_to_geo
+
+help sql_user url_to_ip ip_to_geo
 
 # THANKS YOU CODE NixWasHere/NixC2 #
