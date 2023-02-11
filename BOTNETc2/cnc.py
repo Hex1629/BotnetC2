@@ -628,7 +628,6 @@ def command_line(client):
             elif command == '.HTTP_CFB':  # HTTP CFB
                 http_cfb(args,validate_time, send, client, ansi_clear,attack_sent1, broadcast, data)
             elif command == '.HTTP_REQ':  # HTTP REQ
-                print(args)
                 http_req(args,validate_time, send, client, ansi_clear,
                     attack_sent1, broadcast, data)
             else:
