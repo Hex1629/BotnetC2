@@ -23,5 +23,9 @@ help sql_user url_to_ip ip_to_geo
 SQL botnetC2 and SQL nixc2 to mix 
 
   know as user can use sql from c2 who?
+ 
+ SQL SERVICE
+ 
+  know as you can make sql user from me
 
 # THANKS YOU CODE NixWasHere/NixC2 #
