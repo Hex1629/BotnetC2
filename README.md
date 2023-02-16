@@ -23,9 +23,13 @@ help sql_user url_to_ip ip_to_geo
 SQL botnetC2 and SQL nixc2 to mix 
 
   know as user can use sql from c2 who?
+  
+ MAKE 2FA (OTP)
+  
+  KNOW AS OTP YOU CAN JOIN TO MY DISCORD FOR GET OTP --> https://discord.gg/t4c2z2W7wK | MY DISCORD SERVER
+  
+ # MY DB C2
  
- SQL SERVICE
- 
-  know as you can make sql user from me
+  https://testermegasus.000webhostapp.com/mysql_db_user.txt
 
 # THANKS YOU CODE NixWasHere/NixC2 #
