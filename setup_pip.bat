@@ -4,3 +4,4 @@ pip install cloudscraper
 pip install requests
 pip install ipaddress
 pip install discord-webhook
+pip install socks
