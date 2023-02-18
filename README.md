@@ -15,6 +15,12 @@ For -->
 LAYER4 LAYER7
 ```
 
+# NEW METHODS L4/L7
+
+ L7 --> .http_all .http_dfb .http .cfb_sock
+ 
+ L4 --> .rand_std/rand_hex/rand_vse/rand_all and syn flood back !!
+
 # ** Ex command name **
 Ex command tool
 help sql_user url_to_ip ip_to_geo
