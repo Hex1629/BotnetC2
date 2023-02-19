@@ -1,4 +1,5 @@
 cmd | run file setup_pip.bat
+if someone move ip c2 from 127.0.0.1 to other pls replace this C2_ADDRESS  = "127.0.0.1" with you IP C2
 vscode/notepad | and next you open in cnc.py and saw this OTP_WEB = "" replace this with OTP_WEB = "link_webhook"
 install | and install program putty https://putty.org/ | if you don't have python program  https://www.python.org/ 
 cmd | cd (path folder BotC2) & start python cnc.py 8080 & start python bot.py & start putty.exe -raw 127.0.0.1 8080
