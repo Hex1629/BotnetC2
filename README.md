@@ -1,3 +1,5 @@
+<img src="https://github.com/Hex1629/BotnetC2/blob/main/img/Screenshot_20230219_041923.png" width="490" height="328">
+
 # BOTNETC2 USE OWNER CODE HERE NixWasHere/NixC2
 
 if you can go to here:
