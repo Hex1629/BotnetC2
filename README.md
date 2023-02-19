@@ -9,6 +9,8 @@ https://github.com/NixWasHere/NixC2
 
 BOTNET C2 UPDATE !!! (MAKE SMALL CODE) (SIZE BYTES PACKET NEW OS.URANDOM | RANDBYTES WITH OS) and OTHER
 
+ SETUP | IF YOU WENT RUN BOTNET PLS OPEN SETUP.txt or setup.txt
+
 BotnetC2 its new varints of NixC2
 
 because add sql_user | etc
