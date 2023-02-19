@@ -44,6 +44,8 @@ help sql_user & otp_sent | url_to_ip | ip_to_geo | update_ua (use pip to update 
 
 # DSTAT
 
+<img src="https://github.com/Hex1629/BotnetC2/blob/main/img/Screenshot_20230219_044437.png" width="890" height="590">
+
 <img src="https://github.com/Hex1629/BotnetC2/blob/main/img/Screenshot_20230219_040848.png" width="890" height="590">
 
 <img src="https://github.com/Hex1629/BotnetC2/blob/main/img/Screenshot_20230219_040310.png" width="890" height="590">
