@@ -5,15 +5,17 @@
 if you can go to here:
 https://github.com/NixWasHere/NixC2
 
-# BOTNETC2 v2
+# BOTNETC2 v2?
 
 BOTNET C2 UPDATE !!! (MAKE SMALL CODE) (SIZE BYTES PACKET NEW OS.URANDOM | RANDBYTES WITH OS) and OTHER
-
- SETUP | IF YOU WENT RUN BOTNET PLS OPEN SETUP.txt or setup.txt
 
 BotnetC2 its new varints of NixC2
 
 because add sql_user | etc
+
+# HOW TO SETUP???
+
+SETUP | IF YOU WENT RUN BOTNET PLS OPEN SETUP.txt or setup.txt
 
 # *** layer ***
 For --> 
@@ -21,17 +23,17 @@ For -->
 LAYER4 LAYER7
 ```
 
-# METHODS L4/L7
+# METHODS L4/L7?
 
  L7 --> .cfb_socks .http .http_sock .http_dfb .http_all
  
  L4 --> .rand_std/rand_hex/rand_vse/rand_all and syn flood back !!
 
 # ** Ex command name **
-Ex command tool
+Ex command tool?
 help sql_user & otp_sent | url_to_ip | ip_to_geo | update_ua (use pip to update fakeuseragent packet in botnet) | set_prompt
   
-# HOW TO GET (OTP)
+# HOW TO GET (OTP)?
   
   IF YOU WENT TO GET OTP FROM ME SERVER PLEASE CONTACT THIS IDK.OTHER#1983 | I CAN SENT WEBHOOKS LINK WITH THIS
   
@@ -44,7 +46,7 @@ help sql_user & otp_sent | url_to_ip | ip_to_geo | update_ua (use pip to update 
 
 # THANKS YOU CODE NixWasHere/NixC2 #
 
-# DSTAT
+# DSTAT HIT?
 
 <img src="https://github.com/Hex1629/BotnetC2/blob/main/img/Screenshot_20230219_044437.png" width="890" height="590">
 
