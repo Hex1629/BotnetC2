@@ -25,7 +25,7 @@ LAYER4 LAYER7
 
 # METHODS L4/L7?
 
- L7 --> .cfb_socks .http .http_sock .http_dfb .http_all
+ L7 --> .cfb_socks .http .pyf .http_dfb .http_all
  
  L4 --> .rand_std/rand_hex/rand_vse/rand_all and syn flood back !!
 
@@ -47,6 +47,8 @@ help sql_user & otp_sent | url_to_ip | ip_to_geo | update_ua (use pip to update 
 # THANKS YOU CODE NixWasHere/NixC2 #
 
 # DSTAT HIT?
+
+<img src="https://github.com/Hex1629/BotnetC2/blob/main/img/Screenshot_20230220_084513.png" width="890" height="590">
 
 <img src="https://github.com/Hex1629/BotnetC2/blob/main/img/Screenshot_20230219_044437.png" width="890" height="590">
 
