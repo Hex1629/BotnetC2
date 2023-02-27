@@ -7,7 +7,7 @@ https://github.com/NixWasHere/NixC2
 
 # BOTNETC2 v2?
 
-BOTNET C2 UPDATE !!! (MAKE SMALL CODE) (SIZE BYTES PACKET NEW OS.URANDOM | RANDBYTES WITH OS) and OTHER
+BOTNET C2 (SMALL UPDATE)
 
 BotnetC2 its new varints of NixC2
 
