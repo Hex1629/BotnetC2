@@ -41,7 +41,7 @@ help sql_user & otp_sent | url_to_ip | ip_to_geo | update_ua (use pip to update 
   
  # MY DB C2
  
-  https://testermegasus.000webhostapp.com/mysql_db_user.txt
+  https://idkwebaaaa.24etaathng.repl.co/mysql_db_user.txt
   
 
 # THANKS YOU CODE NixWasHere/NixC2 #
