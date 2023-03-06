@@ -25,7 +25,7 @@ LAYER4 LAYER7
 
 # METHODS L4/L7?
 
- L7 --> .cfb_socks .http .pyf .http_dfb .http_all
+ L7 --> .https_flood .http .pyf .http_dfb .http_all
  
  L4 --> .rand_std/rand_hex/rand_vse/rand_all and syn flood back !!
 
