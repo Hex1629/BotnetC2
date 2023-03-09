@@ -7,7 +7,13 @@ https://github.com/NixWasHere/NixC2
 
 # BOTNETC2 v2?
 
-BOTNET C2 (SMALL UPDATE)
+BOTNET C2 (FIX BUG)
+
+EDITION C2 SERVER
+
+(FOLDER) BOTNETc2_offline_user -->  FOR OFFLINE USER:PASS (READ FILE USER:PASS IN logins.txt)
+
+(FOLDER)              BOTNETc2 -->  FOR ONLINE USER:PASS (DOWNLOAD USER:PASS IN MYSQL & READ FILE USER:PASS IN logins.txt)
 
 BotnetC2 its new varints of NixC2
 
