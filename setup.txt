@@ -1,5 +1,10 @@
 <--+--[ SETUP BOTNET ]--+-->
 
+# EDITION C2 SERVER
+
+(FOLDER) BOTNETc2_offline_user -->  FOR OFFLINE USER:PASS (READ FILE USER:PASS IN logins.txt)
+(FOLDER)              BOTNETc2 -->  FOR ONLINE USER:PASS (DOWNLOAD USER:PASS IN MYSQL & READ FILE USER:PASS IN logins.txt)
+
 # install packet #
 
 pip install cryptography
