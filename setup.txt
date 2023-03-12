@@ -10,6 +10,7 @@
 pip install cryptography
 pip install fake_useragent
 pip install fake_headers
+pip install fake-headers
 pip install cfscrape
 pip install cloudscraper
 pip install requests
