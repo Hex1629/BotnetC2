@@ -678,16 +678,16 @@ def command_line(client):
                 layer_get = ""
                 if len(args) == 2:
                     layer_get = args[1]
-                    if "LAYER4" in layer_get or "L4" in layer_get:
+                    if "LAYER4" in layer_get or "L4" in layer_get or "4" in layer_get:
                         color_random = color()
                         for x in layer4.split('\n'):
                             send(client,f'{color_random}'+x)
-                    elif "LAYER7" in layer_get or "L7" in layer_get:
+                    elif "LAYER7" in layer_get or "L7" in layer_get or "7" in layer_get:
                         color_random = color()
                         for x in layer7.split('\n'):
                             send(client,f'{color_random}'+x)
                 else:
-                    send(client, Fore.RED + '\x1b[3;31;40m Ex Command:METHDOS [LAYER]')
+                    send(client, Fore.RED + '\x1b[3;31;40m Ex Command:METHODS [LAYER]')
                     send(client, Fore.RED + '\x1b[3;31;40m [LAYER] --> LAYER7,LAYER4')
             elif command == "OTP_SENT":
                 hi_id = ''
