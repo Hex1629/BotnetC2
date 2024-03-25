@@ -48,3 +48,10 @@ EXAMPLE CONNECT IF YOU CHANGE IP IN bot.py
 vscode/notepad | and next you open in cnc.py and saw this OTP_WEB = "" replace this with OTP_WEB = "link_webhook_discord"
 install | and install program putty https://putty.org/ | if you don't have python program  https://www.python.org/ 
 cmd | cd (path folder BotC2) & start python cnc.py 8080 & start python bot.py & start putty.exe -raw 127.0.0.1 8080
+
+OPEN PUTTY
+GO TO CONNECTION TYPE
+CLICK OTHER SET RAW
+Type Hostname with you ip server ( cnc ) example 127.0.0.1
+and Port it show in console
+next click Open
