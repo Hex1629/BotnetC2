@@ -53,5 +53,5 @@ OPEN PUTTY
 GO TO CONNECTION TYPE
 CLICK OTHER SET RAW
 Type Hostname with you ip server ( cnc ) example 127.0.0.1
-and Port it show in console
+and Port it show in console or put 8080
 next click Open
