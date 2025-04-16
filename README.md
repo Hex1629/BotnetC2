@@ -1,6 +1,3 @@
-![Screenshot 2024-02-26 224644](https://github.com/Hex1629/BotnetC2/assets/93824226/4d880453-8885-486d-8933-d83e7c910ad5)
-
-
 <img src="https://github.com/Hex1629/BotnetC2/blob/main/img/Screenshot_20230219_041923.png" width="490" height="328">
 
 # BOTNETC2 USE OWNER CODE HERE NixWasHere/NixC2
